@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AMZ Store - Used & New Car Parts</title>
+  <link rel="stylesheet" href="amzstore_co_uk_website/wordpress/wp-content/themes/amzstore/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>UK used &amp; new car parts • Clear condition information</span>
+      <span>Need help finding a part? Contact our team</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-main">
+      <a class="brand" href="#" aria-label="AMZ Store home">
+        <span class="brand-mark">A</span>
+        <span>AMZ <span>STORE</span></span>
+      </a>
+      <form class="searchbar" id="main-search" role="search">
+        <input type="search" id="search-input" placeholder="Search by part name, vehicle or part number">
+        <button type="submit">Search</button>
+      </form>
+      <div class="header-actions">
+        <a href="#contact">My account</a>
+        <a href="#basket">Basket (0)</a>
+      </div>
+    </div>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="container nav-inner">
+        <a class="nav-highlight" href="#used">Used Parts</a>
+        <a href="#new">New Parts</a>
+        <a href="#compare">Compare Prices</a>
+        <a href="#vehicle">Find Parts for My Car</a>
+        <a href="#contact">Help &amp; Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">UK car parts, made easier</div>
+          <h1>Find the right part.<br>Pay the right price.</h1>
+          <p>Shop quality-checked used parts and compare them with new alternatives. Search by vehicle, part name or part number.</p>
+          <div class="reg-panel">
+            <form id="reg-form">
+              <label for="amz-reg">Find parts using your vehicle registration</label>
+              <div class="reg-row">
+                <input class="reg-input" id="amz-reg" placeholder="e.g. AB12 CDE" maxlength="10" autocomplete="off">
+                <button class="btn" type="submit">Find my parts</button>
+              </div>
+              <div class="helper">Registration lookup preview. You can also search by make and model.</div>
+              <p class="helper" id="reg-message" style="display:none;color:#a95a08;font-weight:700"></p>
+            </form>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-visual-content">
+            <div style="font-size:12px;letter-spacing:2px;color:#f8a64e;font-weight:800">AMZ PARTS FINDER</div>
+            <strong>Used first.<br>New compared.</strong>
+            <small>Clear condition • Vehicle fitment • Fair pricing</small>
+            <div style="margin-top:22px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+              <span style="background:rgba(255,255,255,.12);padding:7px 11px;border-radius:30px;font-size:11px">Used components</span>
+              <span style="background:rgba(255,255,255,.12);padding:7px 11px;border-radius:30px;font-size:11px">New alternatives</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:25px">
+      <div class="container trust-row">
+        <div class="trust-item"><span class="trust-icon">✓</span><div><b>Clear condition grades</b><small>Know what you are buying</small></div></div>
+        <div class="trust-item"><span class="trust-icon">↔</span><div><b>Compare new &amp; used</b><small>Make an informed choice</small></div></div>
+        <div class="trust-item"><span class="trust-icon">⌕</span><div><b>Vehicle fitment focus</b><small>Check compatibility first</small></div></div>
+        <div class="trust-item"><span class="trust-icon">UK</span><div><b>UK parts sourcing</b><small>Own stock and partner suppliers</small></div></div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="vehicle">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Shop by part category</h2><p>Start with the component you need.</p></div>
+          <a class="text-link" href="#used">View all categories →</a>
+        </div>
+        <div class="category-grid">
+          <a class="category-card" href="#used"><div class="category-icon">⚙</div><b>Engine &amp; components</b></a>
+          <a class="category-card" href="#used"><div class="category-icon">◉</div><b>Brakes &amp; suspension</b></a>
+          <a class="category-card" href="#used"><div class="category-icon">▣</div><b>Lights &amp; mirrors</b></a>
+          <a class="category-card" href="#used"><div class="category-icon">▤</div><b>Body panels</b></a>
+          <a class="category-card" href="#used"><div class="category-icon">▱</div><b>Interior parts</b></a>
+          <a class="category-card" href="#used"><div class="category-icon">⌁</div><b>Electrical parts</b></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="used">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Featured used parts</h2><p>Browse used stock with condition and source information.</p></div>
+          <a class="text-link" href="#used">Shop used parts →</a>
+        </div>
+        <div class="product-grid" id="product-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="compare">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Compare before you buy</h2><p>See used and new alternatives side by side when matching products are available.</p></div>
+          <a class="text-link" href="#compare">How comparisons work →</a>
+        </div>
+        <div class="compare-grid">
+          <div class="compare-card"><span class="pill">USED PARTS</span><h3>Quality-checked used components</h3><p>Condition grade, actual item photos, donor vehicle details and stock source.</p><div class="compare-price">From your listed price</div><div class="compare-note">Prices depend on part, condition and exact fitment.</div></div>
+          <div class="compare-card"><span class="pill pill-new">NEW ALTERNATIVES</span><h3>Compare aftermarket and genuine</h3><p>Check compatible new options before deciding whether used or new is better value.</p><div class="compare-price">Compare like for like</div><div class="compare-note">Comparisons should include VAT, delivery and part specification.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><div><h2>Popular UK vehicle makes</h2><p>Choose a make to narrow your parts search.</p></div></div>
+        <div class="vehicle-makes" id="vehicle-makes"></div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="contact">
+      <div class="container">
+        <div class="cta-band">
+          <div><h2>Need help finding a specific part?</h2><p>Send the vehicle details and part you need. Our team can help check sourcing and compatibility.</p></div>
+          <a class="btn" href="mailto:info@amzstore.co.uk">Ask us about a part</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="footer-brand">AMZ STORE</div><p style="font-size:12px;color:#b9c7d5;max-width:270px">A UK-focused destination for carefully described used car parts and new alternatives. Check vehicle fitment and availability before ordering.</p></div>
+        <div><h4>Shop parts</h4><a href="#used">Used car parts</a><a href="#new">New car parts</a><a href="#compare">Price comparison</a><a href="#vehicle">Find parts by vehicle</a></div>
+        <div><h4>Customer service</h4><a href="#contact">Delivery &amp; returns</a><a href="#contact">Warranty information</a><a href="#contact">Contact us</a><a href="#contact">Privacy policy</a></div>
+        <div><h4>For suppliers</h4><a href="#contact">Become a supplier</a><a href="#contact">Trade enquiries</a><a href="#contact">About AMZ Store</a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 AMZ Store. All rights reserved.</span><span>UK automotive parts • amzstore.co.uk</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const products = [
+      ["Front Brake Caliper", "VW Golf • 2017–2020", "Used • Grade A", "£85.00", "AMZ owned"],
+      ["Headlight Unit", "BMW 3 Series • F30", "Used • Grade B", "£145.00", "UK supplier"],
+      ["Starter Motor", "Ford Focus • 1.0 EcoBoost", "Used • Grade A", "£62.00", "AMZ owned"],
+      ["Door Wing Mirror", "Audi A3 • 2016–2020", "Used • Grade A", "£79.00", "AMZ owned"],
+      ["Rear Tailgate", "Nissan Qashqai • J11", "Used • Grade B", "£190.00", "UK supplier"],
+      ["Gearbox Assembly", "Vauxhall Astra • 2015", "Used • Grade A", "£420.00", "AMZ owned"],
+      ["Engine ECU", "Mercedes-Benz C-Class", "Used • Grade A", "£110.00", "UK supplier"],
+      ["Front Suspension Arm", "Toyota Corolla • 2019", "Used • Grade B", "£48.00", "AMZ owned"]
+    ];
+
+    const grid = document.getElementById("product-grid");
+    products.forEach((product, index) => {
+      const card = document.createElement("article");
+      card.className = "product-card";
+      card.innerHTML = `
+        <div class="product-image">
+          <img src="https://picsum.photos/seed/amz-car-part-${index + 1}/600/400" alt="${product[0]}">
+        </div>
+        <div class="product-info">
+          <span class="pill ${index % 3 === 1 ? "pill-partner" : ""}">${product[2]}</span>
+          <h3>${product[0]}</h3>
+          <div class="product-meta">${product[1]}</div>
+          <div class="product-price">${product[3]}</div>
+          <div class="product-foot"><span>${product[4]}</span><span>✓ In stock</span></div>
+        </div>`;
+      grid.appendChild(card);
+    });
+
+    const makes = ["Audi","BMW","Citroën","Ford","Honda","Jaguar","Land Rover","Mercedes-Benz","MINI","Nissan","Peugeot","Renault","Toyota","Vauxhall","Volkswagen","Volvo"];
+    const makeContainer = document.getElementById("vehicle-makes");
+    makes.forEach(make => {
+      const link = document.createElement("a");
+      link.className = "make-chip";
+      link.href = "#used";
+      link.textContent = make;
+      link.addEventListener("click", () => {
+        document.getElementById("search-input").value = make;
+      });
+      makeContainer.appendChild(link);
+    });
+
+    document.getElementById("reg-form").addEventListener("submit", event => {
+      event.preventDefault();
+      const message = document.getElementById("reg-message");
+      message.style.display = "block";
+      message.textContent = "Registration lookup is a preview only. Search by make and model or part name below.";
+      document.getElementById("search-input").focus();
+    });
+
+    document.getElementById("main-search").addEventListener("submit", event => {
+      event.preventDefault();
+      document.getElementById("used").scrollIntoView({behavior:"smooth"});
+    });
+  </script>
+</body>
+</html>
